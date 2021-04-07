@@ -78,32 +78,8 @@ var gProjects = [{
 // console.table(gProjects);
 // console.log('gProjects:', gProjects)
 
-renderProjects()
+renderProjects();
 
-function renderProjects() {
-    var elMainPortfolio = $('.main-portfolio');
-    var strHTML = gProjects.map(function (project) {
-        return `    
-        <div class="col-md-4 col-sm-6 portfolio-item " "onclick="renderProjectModal(${project.id})">
-            <a class="portfolio-link ${project.id} portfolioModal" data-toggle="modal"  >
-            <div class="portfolio-hover" >
-                <div class="portfolio-hover-content" ></div>
-            </div>
-            <img class="img-fluid " src="img/portfolio/${project.id}.png">
-            </a>
-            <div class="portfolio-caption">
-            <h4>${project.name}</h4>
-            <p class="text-muted">${project.description}</p>
-            </div>
-            </div>`
-    });
-    $(elMainPortfolio).html(strHTML.join(''));
-};
-
-function renderProjectModal(id) {
-    console.log(id);
-
-}
 
 
 
